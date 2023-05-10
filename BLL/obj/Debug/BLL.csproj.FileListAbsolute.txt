@@ -1,0 +1,28 @@
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\BLL.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\BLL.pdb
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\AutoMapper.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\DAL.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\EntityFramework.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\DAL.pdb
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\DAL.dll.config
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\AutoMapper.xml
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\bin\Debug\EntityFramework.xml
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\obj\Debug\BLL.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\BLL\obj\Debug\BLL.pdb
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\BLL.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\BLL.pdb
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\AutoMapper.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\DAL.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\EntityFramework.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\DAL.pdb
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\DAL.dll.config
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\AutoMapper.xml
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\bin\Debug\EntityFramework.xml
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\obj\Debug\BLL.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\BLL\obj\Debug\BLL.pdb

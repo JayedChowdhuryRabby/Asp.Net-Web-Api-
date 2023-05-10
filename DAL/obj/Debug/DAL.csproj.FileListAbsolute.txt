@@ -1,0 +1,36 @@
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\DAL.dll.config
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\DAL.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\DAL.pdb
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.xml
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.dll
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.pdb
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.InitDB.resources
+D:\.NetLabTask\Final Project\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\DAL.dll.config
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\DAL.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\DAL.pdb
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.xml
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.InitDB.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.dll
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.pdb
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.addedadmindatabase.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.cart.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.transaction.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.transaction1.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.transaction2.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.uihh.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.hjk.resources
+C:\Users\QC\Desktop\SwiftSaleEcommerce\DAL\obj\Debug\DAL.Migrations.final.resources

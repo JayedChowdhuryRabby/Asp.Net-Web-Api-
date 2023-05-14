@@ -7,13 +7,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SwiftSaleEcommerce.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class UserController : ApiController
     {
         [HttpGet]
-        [Route("api/user")]
+        [Route("api/users")]
         public IHttpActionResult Get()
         {
             try

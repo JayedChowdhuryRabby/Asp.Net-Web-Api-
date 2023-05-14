@@ -73,6 +73,19 @@ namespace BLL.AuthService
             }
             return false;
         }
+        public static bool DeliveryManAccess(string tokenkey)
+        {
+            var extoken = DataAccessFactory.TokenData().Read(tokenkey);
+            var user = DataAccessFactory.UserData().Read();
+            var IsSeller = (from u in user
+                            where u.Email == extoken.UserEmail
+                            select u.Role).FirstOrDefault();
+            if (IsSeller.Equals("DeliveryMan"))
+            {
+                return true;
+            }
+            return false;
+        }
         public static bool IsTokenValid(string tokenkey)
         {
             var extoken = DataAccessFactory.TokenData().Read(tokenkey);

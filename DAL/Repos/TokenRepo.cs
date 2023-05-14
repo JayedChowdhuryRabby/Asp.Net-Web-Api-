@@ -15,6 +15,7 @@ namespace DAL.Repos
             db.Tokens.Add(obj);
             if (db.SaveChanges() > 0) return obj;
             return null;
+            
         }
 
         public bool Delete(int id)
@@ -24,7 +25,7 @@ namespace DAL.Repos
 
         public List<Token> Read()
         {
-            throw new NotImplementedException();
+            return db.Tokens.ToList();
         }
 
         public Token Read(string id)
@@ -36,7 +37,7 @@ namespace DAL.Repos
         {
             var token = Read(obj.TokenString);
             db.Entry(token).CurrentValues.SetValues(obj);
-            if (db.SaveChanges() > 0) return obj;
+            if (db.SaveChanges() > 0) return token;
             return null;
         }
     }

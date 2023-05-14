@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app= angular.module("my-app",[]);
+    app.controller('frstCtrl',function($scope){
+        $scope.name="Rifat";
+    });
+    app.controller('scndCtrl',function($scope){
+        $scope.name="Tanim";
+    });
+    app.controller('thrdCtrl',function($scope){
+        $scope.names=["Tanim","abir","Rahim","Korim"];
+    });
+    app.controller('loginCtrl',function($scope){
+        $scope.login=function(){
+             var v = $scope.l;
+             debugger;
+        };
+    });
+</script>
+<body ng-app="my-app">
+    <div ng-controller="frstCtrl">
+        {{name}}
+    </div>
+<div ng-controller="scndCtrl">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p ng-bind="name"></p>
+</div>
+<div ng-controller="thrdCtrl">
+    <ul>
+        <li ng-repeat="n in names">{{n}}</li>
+    </ul>
+
+    <table border="table-hover"> 
+        <tr ng-repeat="n in names">
+            <td>{{n}}</td>
+        </tr>
+    </table>
+</div>
+<br>
+<div ng-controller="loginCtrl">
+    <form ng-submit = "login()">
+        <input type="text" ng-model="l.email" placeholder="Email"><br>
+        <input type="password" ng-model="l.pass" placeholder="Password"><br>
+        <input type="submit">
+    </form>
+</div>
+
+</body>
+</html>

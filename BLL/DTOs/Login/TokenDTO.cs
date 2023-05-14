@@ -10,6 +10,7 @@ namespace BLL.DTOs.Login
 {
     public class TokenDTO
     {
+        public int Id { get; set; }   
         [Required]
         public string TokenString { get; set; }
         [Required]

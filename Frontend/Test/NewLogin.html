@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <script>
+        var app = angular.module("my-app", []);
+        app.factory('interceptor', ['$q', function($q) {
+            var interceptor = {
+                request: function(config) {
+                    config.headers.Authorization = localStorage.getItem("TokenKey");
+                    debugger;
+                    return config;
+                },
+                response: function(response) {
+                    debugger;
+                    return response;
+                },
+                responseError: function(rejection) {
+                    if (rejection.status === 401) {
+                        // Handle unauthorized access
+                        // You can redirect the user to the login page or perform other actions
+                    }
+                    return $q.reject(rejection);
+                }
+            };
+            return interceptor;
+        }]);
+        app.config(function($httpProvider) {
+            $httpProvider.interceptors.push('interceptor');
+        });
+
+        app.controller('loginCtrl', function($scope, $http) {
+            $scope.login = function() {
+                var v = $scope.l;
+                $http.post("https://localhost:44345/api/login", v).then(function(resp) {
+                    localStorage.setItem("TokenKey", resp.data.Result);
+                    loadCategories(); // Call the function to load categories after successful login
+                }, function(err) {
+                    // Handle login error
+                });
+            };
+        });
+
+        app.controller('CategoryCtrl', function($scope, $http) {
+            $scope.load = function() {
+                $http({
+                    method: 'GET',
+                    url: "https://localhost:44345/api/category",
+                    headers: {
+                        'Authorization': localStorage.getItem("TokenKey")
+                    }
+                }).then(function(resp) {
+                    $scope.categories = resp.data;
+                }, function(err) {
+                    // Handle error
+                });
+            };
+        });
+
+        function loadCategories() {
+            var appElement = document.querySelector('[ng-app="my-app"]');
+            var $scope = angular.element(appElement).scope();
+            $scope.$apply(function() {
+                $scope.load();
+            });
+        }
+    </script>
+</head>
+<body class="body" ng-app="my-app">
+    <div class="navbar">
+        <a href="#" class="active">Swiftsale</a>
+        <input type="text" placeholder="Search" class="search-input">
+        <a href="#">Sign In</a>
+        <a href="#">Sign Up</a>
+        <a href="#">User Profile</a>
+        <a href="#">Cart</a>
+    </div>
+    <div><h2>Hello There</h2></div>
+    <div ng-controller="loginCtrl">
+        <form ng-submit="login()">
+            <input type="text" ng-model="l.Email" placeholder="Email"><br>
+            <input type="password" ng-model="l.Password" placeholder="Password"><br>
+            <input type="submit">
+        </form>
+    </div>
+    <div ng-controller="CategoryCtrl">
+        <button ng-click="load()">Load</button>
+        <table border="1" style="border-color: blue;">
+            <tr>
+                <th>Id</th>
+                <th>Category Name</th>
+            </tr>
+            <tr ng-repeat="c in categories">
+                <td>{{c.Id}}</td>
+                <td>{{c.Category_Name}}</td>
+            </tr>
+        </table>
+    </div>
+    <footer class="footer">
+        <h1>Swiftsale</h1>
+        <p>&copy;Copyright 2023 Swiftsale. All rights reserved</p>
+    </footer>
+</body>
+</html>

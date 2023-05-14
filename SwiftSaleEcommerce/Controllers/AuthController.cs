@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SwiftSaleEcommerce.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class AuthController : ApiController
     {
         [HttpPost]
@@ -20,7 +22,8 @@ namespace SwiftSaleEcommerce.Controllers
                 var res = AuthService.Authenticate(login.Email, login.Password);
                 if (res != null)
                 {
-                    return Request.CreateResponse(HttpStatusCode.OK, res);
+                    return Request.CreateResponse(HttpStatusCode.OK, new { Message = "Login successful", Result = res });
+                    //return Request.CreateResponse(HttpStatusCode.OK, res);
                 }
                 else
                 {

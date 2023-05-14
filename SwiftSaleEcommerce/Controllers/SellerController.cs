@@ -9,12 +9,14 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SwiftSaleEcommerce.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class SellerController : ApiController
     {
-        [SellerAccess]
+        //[SellerAccess]
         [HttpGet]
         [Route("api/seller")]
         public IHttpActionResult Get()

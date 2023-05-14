@@ -1,0 +1,75 @@
+.body { background-color: #131921; color: #FFFFFF; } 
+.side-menu { width: 200px; } 
+.side-menu ul { list-style-type: none; padding: 0; padding-top: 5px; margin: 0; } 
+.side-menu li { border-bottom: 1px solid #212121; } 
+.side-menu li a { display: block; padding: 10px; background-color: #648a97; text-decoration: none; color: #FFFFFF; } 
+.side-menu li a:hover { background-color: #FFFFFF; text-decoration: none; color: #212121; } 
+.navbar { background-color: #333333; padding: 12px; display: flex; justify-content: space-between; align-items: center; } 
+.navbar a { color: #FFFFFF; text-decoration: solid; margin-right: 10px; font-size: 18px; } .navbar .active { font-weight: bold; } 
+.navbar .search-input { width: 400px; padding: 10px; font-size: 18px; border: none; background-color: #555555; color: #FFFFFF; } 
+.footer { background-color: #333333; padding: 1px; position: fixed; font-size: 65%; bottom: 0; height: 80px; width: 100%; text-align: center;color: #FFFFFF; }
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+ 
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    width: 11%;
+    
+  }
+  th {
+    background-color: #4CAF50;
+    color: white;
+    
+  }
+  .table-wrapper{
+    padding: 5px;
+    background-color: #080808;
+    width: 29.5cm;
+    margin-top: 0.5cm;
+    height: 90%;
+    margin-left: 6cm;
+
+  }
+  .containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .table-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+  
+  .table {
+    background-color: #0c0c0c;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 2cm;
+    width: 70%;
+    height: 85%;
+  }
+  .table1 th, .table1 td {
+    padding: 3px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    height: 0cm;
+    width: 20cm;
+  }
+  .containers {
+    width: 200%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  

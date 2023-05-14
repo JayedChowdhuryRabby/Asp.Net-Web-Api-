@@ -9,9 +9,11 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using BLL.DTOs.SignUp;
+using System.Web.Http.Cors;
 
 namespace SwiftSaleEcommerce.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class AdminController : ApiController
     {
         [HttpGet]

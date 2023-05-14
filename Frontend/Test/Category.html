@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script>
+    var app = angular.module("my-app",[]);
+    app.controller("categoryCtrl",function($scope, $http){
+        $http.get("https://localhost:44345/api/category").then(function(resp){
+            $scope.categories=resp.data;
+        },
+        function(err){
+            debugger;
+        });
+    })
+</script>
+<body ng-app="my-app">
+<div ng-controller="categoryCtrl">
+  <table border="1" style="border-color: blue;">
+    <tr>
+        <th>Id</th>
+        <th>Category Name</th>
+    </tr>  
+    <tr ng-repeat="c in categories">
+        <td>{{c.Id}}</td>
+        <td>{{c.Category_Name}}</td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>

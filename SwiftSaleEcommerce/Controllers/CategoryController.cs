@@ -1,16 +1,20 @@
 ﻿using BLL.DTOs;
 using BLL.Services;
+using SwiftSaleEcommerce.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace SwiftSaleEcommerce.Controllers
 {
+    [EnableCors("*", "*", "*")]
     public class CategoryController : ApiController
     {
+       [SellerAccess]
         [HttpGet]
         [Route("api/category")]
         public IHttpActionResult Get()

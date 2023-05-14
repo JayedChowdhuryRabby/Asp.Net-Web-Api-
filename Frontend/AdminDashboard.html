@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="mystyle.css">
+</head>
+<body class="body" ng-app="my-app">
+  <div class="navbar">
+    <a href="#" class="active">Swiftsale</a>
+    <input type="text" placeholder="Search" class="search-input">
+    <div class="navbar">
+      <a href="#">Sign In</a>
+      <a href="#">Sign Up</a>
+      <a href="#">Cart</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="side-menu">
+      <ul>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Edit Profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="table-container">
+    <div class="table" ng-controller="adminCtrl">
+      <h1>Admin List</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="admin in data | limitTo:numItems">
+            <td>{{ admin.Id }}</td>
+            <td>{{ admin.Name }}</td>
+            <td>{{ admin.Address }}</td>
+            <td>{{ admin.Phone }}</td>
+            <td><button ng-click="deleteAdmin(admin.Id)">Delete</button></td>
+
+          </tr>
+        </tbody>
+      </table>
+      <div ng-if="data.length > 2">
+        <button ng-click="toggleDisplay()">View All</button>
+      </div>
+    </div>
+  </div>
+  <div class="table" ng-controller="sellerCtrl">
+    <h1>Seller List</h1>
+    <table>
+        <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Shop</th>
+              <th>Phone</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="seller in data | limitTo:numItems">
+              <td>{{ seller.Id }}</td>
+              <td>{{ seller.Seller_Name }}</td>
+              <td>{{ seller.Shop_Name }}</td>
+              <td>{{ seller.Seller_Phone }}</td>
+              <td>{{ seller.Seller_Address }}</td>
+            </tr>
+          </tbody>
+    </table>
+    <div ng-if="data.length > 2">
+    <button ng-click="toggleDisplay()">View All</button>
+  </div>
+</div>
+<div class="table" ng-controller="customerCtrl">
+  <h1>customer List</h1>
+  <table>
+      <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Shop</th>
+            <th>Phone</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="customer in data | limitTo:numItems">
+            <td>{{ customer.customer_id }}</td>
+            <td>{{ customer.first_name}}</td>
+            <td>{{ customer.last_name }}</td>
+            <td>{{ customer.gender }}</td>
+            <td>{{ customer.address}}</td>
+          </tr>
+        </tbody>
+  </table>
+  <div ng-if="data.length > 2">
+  <button ng-click="toggleDisplay()">View All</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="table-wrapper" ng-controller="productCtrl">
+  <h1>product List</h1>
+  <table class="table1">
+      <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Shop</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Image</th>
+            <th>Sell By</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="product in data | limitTo:numItems">
+            <td>{{ product.Id }}</td>
+            <td>{{ product.Name}}</td>
+            <td>{{ product.Description }}</td>
+            <td>{{ product.Price }}</td>
+            <td>{{ product.C_Id}}</td>
+            <td>{{ product.Image}}</td>
+            <td>{{ product.SellBy}}</td>
+          </tr>
+        </tbody>
+  </table>
+</div>
+
+  <footer class="footer">
+    <h3>Swiftsale</h3>
+    <p>&copy; 2023 Swiftsale. All rights reserved</p>
+  </footer>
+
+  <script>
+    var app = angular.module("my-app", []);
+    app.controller('adminCtrl', function ($scope, $http) {
+      $http.get("https://localhost:44345/api/admin").then(function (resp) {
+        $scope.data = resp.data;
+      }, function (error) {
+        console.log(error);
+      });
+      $scope.numItems = 2;
+      $scope.toggleDisplay = function() {
+        $scope.numItems = $scope.data.length;
+      };
+      $scope.deleteAdmin = function(id) {
+    $http.post("https://localhost:44345/api/admin/delete/" + id).then(function (resp) {
+      // Remove the deleted admin from the displayed data
+      var index = $scope.data.findIndex(function (admin) {
+        return admin.Id === id;
+      });
+      if (index !== -1) {
+        $scope.data.splice(index, 1);
+      }
+    }, function (error) {
+      console.log(error);
+    });
+  };
+    });
+    app.controller('sellerCtrl', function ($scope, $http) {
+    $http.get("https://localhost:44345/api/seller").then(function (resp) {
+      $scope.data = resp.data;
+    }, function (error) {
+      console.log(error);
+    });
+    $scope.numItems = 2;
+    $scope.toggleDisplay = function() {
+      $scope.numItems = $scope.data.length;
+    };
+  });
+  app.controller('customerCtrl', function ($scope, $http) {
+    $http.get("https://localhost:44345/api/customer").then(function (resp) {
+      $scope.data = resp.data;
+    }, function (error) {
+      console.log(error);
+    });
+    $scope.numItems = 2;
+    $scope.toggleDisplay = function() {
+      $scope.numItems = $scope.data.length;
+    };
+  });
+  app.controller('productCtrl', function ($scope, $http) {
+    $http.get("https://localhost:44345/api/product").then(function (resp) {
+      $scope.data = resp.data;
+    }, function (error) {
+      console.log(error);
+    });
+    $scope.numItems = 2;
+    $scope.toggleDisplay = function() {
+      $scope.numItems = $scope.data.length;
+    };
+  });
+  </script>
+</body>
+</html>

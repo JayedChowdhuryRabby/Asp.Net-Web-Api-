@@ -4,7 +4,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script>
     var Path = 'C:/Users/QC/Desktop/SwiftSaleEcommerce/Frontend/';
     var app = angular.module("app", []);
@@ -34,6 +34,7 @@
     }]);
 
     app.controller('CategoryCtrl', function ($scope, $window, $http) {
+        debugger;
        
         $http({
             method: 'GET',
@@ -46,7 +47,7 @@
             $scope.categories = resp.data;
         
         }, function (err) {
-           
+           debugger;
             $window.alert("Access denied");
             window.location.href = Path + 'Login.html';
         });
